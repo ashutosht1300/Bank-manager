@@ -95,7 +95,14 @@ void account::draw(int x)
 
 void account::report() const
 {
-    cout <<acno << setw(15) << name << setw(7) << " " << type << setw(9) << " " << deposit << endl;
+    cout <<setw(5)<<acno << setw(5) <<" ";
+    cout<<setw(10);
+    char nm[10];
+    for(int i=0;i<10;++i)
+        nm[i]=name[i];
+    cout<< nm ;
+    cout<< setw(5) << " " << type ;
+    cout<< setw(5) << " " << deposit << endl;
 }
 
 int account::retacno() const
